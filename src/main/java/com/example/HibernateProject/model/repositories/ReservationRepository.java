@@ -10,11 +10,11 @@ import java.util.List;
 @Repository
 public interface ReservationRepository extends CrudRepository<ReservationModel, Integer> {
 
-//    ReservationModel findByLastname(String name);
-//    List<ReservationModel> findByIdGreaterThan(int id);
-//    List<ReservationModel> findByDateBefore(LocalDate date);
-//    List<ReservationModel> findByDateAfter(LocalDate date);
-//    List<ReservationModel> findByDateBetween(LocalDate now, LocalDate date);
+    ReservationModel findByLastname(String name);
+    List<ReservationModel> findByIdGreaterThan(int id);
+    List<ReservationModel> findByDateBefore(LocalDate date);
+    List<ReservationModel> findByDateAfter(LocalDate date);
+    List<ReservationModel> findByDateBetween(LocalDate now, LocalDate date);
     List<ReservationModel> findByLastnameContaining(String character);
     List<ReservationModel> deleteByLastname(String name);
 

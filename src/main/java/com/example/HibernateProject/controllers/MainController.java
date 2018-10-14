@@ -34,6 +34,9 @@ public class MainController {
         }
         reservationRepository.save(new ReservationModel(form));
 
+        model.addAttribute("reservationForm", new ReservationForm());
+        model.addAttribute("reservations", reservationRepository.findAll());
+
         return "index";
     }
 
